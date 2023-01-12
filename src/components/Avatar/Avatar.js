@@ -1,12 +1,14 @@
 import React from 'react';
 import './Avatar.css';
 
-export default function Avatar({ head }) {
+export default function Avatar({ head, middle, pants }) {
   return (
     <div className="avatar">
+      <div className="head-img" style={{ backgroundImage: `url(./${head}-head.png)` }}></div>
+      <div className="middle-img" style={{ backgroundImage: `url(./${middle}-middle.png)` }}></div>
       <div
-        className="head-img"
-        style={{ backgroundImage: `url(./${head}-head.png)`, height: '100px' }}
+        className="pants-img"
+        style={{ backgroundImage: `url(./${pants}-pants.png)`, height: '100px' }}
       ></div>
     </div>
   );
