@@ -1,5 +1,22 @@
 ![wireframe](./public/wireframe.png)
 
+##Components
+
+                App.js
+                Form.js
+        Stats.js            Avatar.js
+
+Form.js passes props to Stats.js and Avatar.js (siblings)
+
+##Plan
+
+-make components
+-gather images (background/avatar)
+-start with head, initialise state
+-pass between components
+-repeat for each component
+-style
+
 Learning Objectives
 Use attributes in parent components to pass data down to child components as props
 Use useState hook to create and update simple (primitive) component state
