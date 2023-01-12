@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Form from './components/Form';
-import Stats from './components/Stats';
-import Avatar from './components/Avatar';
+import Form from './components/Form/Form.js';
+// import Stats from './components/Stats';
+// import Avatar from './components/Avatar';
 
 function App() {
   return (
@@ -11,11 +11,9 @@ function App() {
       <section className="container">
         <div className="left">
           <Form />
-          <Stats />
+          {/* <Stats /> */}
         </div>
-        <div className="right">
-          <Avatar />
-        </div>
+        <div className="right">{/* <Avatar /> */}</div>
       </section>
     </main>
   );
