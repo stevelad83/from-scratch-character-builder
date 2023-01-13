@@ -1,7 +1,18 @@
 import React from 'react';
 import Select from './Select.js';
+import { useState } from 'react';
 
-export default function Form({ head, middle, pants, input, setInput, handleChange, handleClick }) {
+export default function Form({ head, middle, pants, handleChange, setCatchphrases }) {
+  const [input, setInput] = useState('');
+  const handleClick = () => {
+    if (!input) return;
+    setCatchphrases((prevState) => {
+      return [...prevState, input];
+    });
+
+    setInput('');
+  };
+
   return (
     <div className="form">
       <Select

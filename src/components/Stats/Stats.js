@@ -4,7 +4,7 @@ export default function Stats({ headCount, middleCount, pantsCount, catchphrases
   return (
     <div>
       <p>
-        You have changed your head {headCount} times, middle {middleCount} times, and pants
+        You have changed your head {headCount} times, middle {middleCount} times, and pants{' '}
         {pantsCount} times.
       </p>
       <ul className="catchphrases">
