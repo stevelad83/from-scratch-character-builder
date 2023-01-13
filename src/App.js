@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Form from './components/Form/Form.js';
-// import Stats from './components/Stats';
+import Stats from './components/Stats/Stats.js';
 import Avatar from './components/Avatar/Avatar.js';
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
     if (type === 'head') {
       setHead(value);
       setHeadCount(headCount + 1);
+      // console.log('headCount', headCount);
     }
     if (type === 'middle') {
       setMiddle(value);
@@ -47,7 +48,7 @@ function App() {
             }}
           />
 
-          {/* <Stats /> */}
+          <Stats {...{ headCount, middleCount, pantsCount }} />
         </div>
         <div className="right">
           <Avatar {...{ head, middle, pants }} />
