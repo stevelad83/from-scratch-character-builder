@@ -11,17 +11,7 @@ function App() {
   const [headCount, setHeadCount] = useState(0);
   const [middleCount, setMiddleCount] = useState(0);
   const [pantsCount, setPantsCount] = useState(0);
-  // const [input, setInput] = useState('');
   const [catchphrases, setCatchphrases] = useState([]);
-
-  // const handleClick = () => {
-  //   if (!input) return;
-  //   setCatchphrases((prevState) => {
-  //     return [...prevState, input];
-  //   });
-  //   console.log('click');
-  //   setInput('');
-  // };
 
   const handleChange = (type, value) => {
     if (type === 'head') {

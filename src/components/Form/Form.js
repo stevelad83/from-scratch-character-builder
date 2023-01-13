@@ -7,6 +7,8 @@ export default function Form({ head, middle, pants, handleChange, setCatchphrase
   const handleClick = () => {
     if (!input) return;
     setCatchphrases((prevState) => {
+      // console.log('prevState', prevState);
+      // console.log(input);
       return [...prevState, input];
     });
 
