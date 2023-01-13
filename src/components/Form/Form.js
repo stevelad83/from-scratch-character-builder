@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from './Select.js';
 
-export default function Form({ head, middle, pants, input, handleChange }) {
+export default function Form({ head, middle, pants, input, setInput, handleChange, handleClick }) {
   return (
     <div className="form">
       <Select
@@ -23,9 +23,15 @@ export default function Form({ head, middle, pants, input, handleChange }) {
         onChange={(e) => handleChange('pants', e.target.value)}
       />
       <div className="form-control">
-        <input type="text" value={input} />
+        <input
+          type="text"
+          value={input}
+          onChange={(e) => {
+            setInput(e.target.value);
+          }}
+        />
         <label>Add a catchphrase</label>
-        <button>Add</button>
+        <button onClick={handleClick}>Add</button>
       </div>
     </div>
   );
