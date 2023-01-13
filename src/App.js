@@ -7,16 +7,23 @@ import Avatar from './components/Avatar/Avatar.js';
 function App() {
   const [head, setHead] = useState('dog');
   const [middle, setMiddle] = useState('blue');
-  // const [headCount, setHeadCount] = useState(0);
+  const [pants, setPants] = useState('white');
+  const [headCount, setHeadCount] = useState(0);
+  const [middleCount, setMiddleCount] = useState(0);
+  const [pantsCount, setPantsCount] = useState(0);
 
   const handleChange = (type, value) => {
     if (type === 'head') {
       setHead(value);
-      // setHeadCount(headCount + 1);
+      setHeadCount(headCount + 1);
     }
     if (type === 'middle') {
       setMiddle(value);
-      // setHeadCount(headCount + 1);
+      setMiddleCount(middleCount + 1);
+    }
+    if (type === 'pants') {
+      setPants(value);
+      setPantsCount(pantsCount + 1);
     }
   };
 
@@ -25,12 +32,25 @@ function App() {
       <h1>Character Designer</h1>
       <section className="container">
         <div className="left">
-          <Form {...{ head, middle, handleChange }} />
+          <Form
+            {...{
+              head,
+              middle,
+              pants,
+              setHead,
+              setMiddle,
+              setPants,
+              handleChange,
+              setHeadCount,
+              setMiddleCount,
+              setPantsCount,
+            }}
+          />
 
           {/* <Stats /> */}
         </div>
         <div className="right">
-          <Avatar {...{ head, middle }} />
+          <Avatar {...{ head, middle, pants }} />
         </div>
       </section>
     </main>
