@@ -1,8 +1,9 @@
 import React from 'react';
+import './Stats.css';
 
 export default function Stats({ headCount, middleCount, pantsCount, catchphrases }) {
   return (
-    <div>
+    <div className="stats-div">
       <p>
         You have changed your head {headCount} times, middle {middleCount} times, and pants{' '}
         {pantsCount} times.

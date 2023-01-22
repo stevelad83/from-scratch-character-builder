@@ -4,5 +4,7 @@
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  width: 250px;
+  height: 200px;
+  width: auto;
+  margin: auto;
 }

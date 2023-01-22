@@ -1,6 +1,7 @@
 import React from 'react';
 import Select from './Select.js';
 import { useState } from 'react';
+import './Form.css';
 
 export default function Form({ head, middle, pants, handleChange, setCatchphrases }) {
   const [input, setInput] = useState('');
