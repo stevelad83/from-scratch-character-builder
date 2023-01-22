@@ -1,24 +1,61 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Form from './components/Form/Form.js';
+import Stats from './components/Stats/Stats.js';
+import Avatar from './components/Avatar/Avatar.js';
 
 function App() {
+  const [head, setHead] = useState('dog');
+  const [middle, setMiddle] = useState('blue');
+  const [pants, setPants] = useState('white');
+  const [headCount, setHeadCount] = useState(0);
+  const [middleCount, setMiddleCount] = useState(0);
+  const [pantsCount, setPantsCount] = useState(0);
+  const [catchphrases, setCatchphrases] = useState([]);
+
+  const handleChange = (type, value) => {
+    if (type === 'head') {
+      setHead(value);
+      setHeadCount(headCount + 1);
+    }
+    if (type === 'middle') {
+      setMiddle(value);
+      setMiddleCount(middleCount + 1);
+    }
+    if (type === 'pants') {
+      setPants(value);
+      setPantsCount(pantsCount + 1);
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <h1>Character Designer</h1>
+      <section className="container">
+        <div className="left">
+          <Form
+            {...{
+              head,
+              middle,
+              pants,
+              setHead,
+              setMiddle,
+              setPants,
+              handleChange,
+              setCatchphrases,
+              setHeadCount,
+              setMiddleCount,
+              setPantsCount,
+            }}
+          />
+
+          <Stats {...{ headCount, middleCount, pantsCount, catchphrases }} />
+        </div>
+        <div className="right">
+          <Avatar {...{ head, middle, pants }} />
+        </div>
+      </section>
+    </main>
   );
 }
 

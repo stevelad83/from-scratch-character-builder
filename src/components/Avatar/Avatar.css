@@ -1,0 +1,10 @@
+.head-img,
+.middle-img,
+.pants-img {
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  height: 200px;
+  width: auto;
+  margin: auto;
+}
